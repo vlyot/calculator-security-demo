@@ -9,7 +9,8 @@ on:
 
 permissions:
   contents: read
-  security-events: write
+  security-events: write  # Required for SARIF upload
+  actions: read           # Required for workflow access
 
 jobs:
   sca:

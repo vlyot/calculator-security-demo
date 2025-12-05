@@ -9,8 +9,9 @@ on:
 
 permissions:
   contents: read
-  security-events: write
-  issues: write  # For ZAP to create issues
+  security-events: write  # Required for SARIF upload
+  actions: read           # Required for workflow access
+  issues: write           # For ZAP to create issues (optional)
 
 jobs:
   dast:
